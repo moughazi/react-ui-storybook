@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "../Button/Button.tsx";
+import { Button } from "../../../react-lib/src/Button/Button.tsx";
 import "./header.css";
 
 type User = {
