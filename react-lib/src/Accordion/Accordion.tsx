@@ -1,5 +1,5 @@
 import { useMemo, type ComponentProps, type ReactNode } from "react";
-import { AccordionCore } from "../AccordionCore/AccordionCore";
+import { AccordionCore } from "../AccordionCore";
 import {
     BREAKPOINT,
     getComponentClassName,
