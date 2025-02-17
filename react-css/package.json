@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "start": "postcss \"src/**/*.scss\" --base src --dir dist --ext css --verbose --watch --env development_client --config ../../../config/postcss.config.js",
-    "build": "postcss \"src/**/*.scss\" --base src --dir dist --ext css --verbose --env production_client --config ../../../config/postcss.config.js",
+    "start": "postcss \"src/**/*.scss\" --base src --dir dist --ext css --verbose --watch --env development_client --config ../config/postcss.config.cjs",
+    "build": "postcss \"src/**/*.scss\" --base src --dir dist --ext css --verbose --env production_client --config ../config/postcss.config.cjs",
     "start:storybook": "storybook dev -p 6008",
     "build:storybook": "storybook build",
     "build-storybook": "storybook build",
@@ -23,6 +23,7 @@
     "chromatic": "npx chromatic"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.20",
     "rc-slider": "^11.1.7"
   },
   "peerDependencies": {
