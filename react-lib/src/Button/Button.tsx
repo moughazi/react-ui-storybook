@@ -1,4 +1,3 @@
-import "../../../react-css/src/Button/button.css";
 
 export interface ButtonProps {
   /** Is this the principal call to action on the page? */

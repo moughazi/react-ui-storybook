@@ -1,5 +1,5 @@
 {
-  "name": "@axa-fr/design-system-look-and-feel-css",
+  "name": "react-css",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
+    "pack": "npm pack",
     "start": "postcss \"src/**/*.scss\" --base src --dir dist --ext css --verbose --watch --env development_client --config ../config/postcss.config.cjs",
     "build": "postcss \"src/**/*.scss\" --base src --dir dist --ext css --verbose --env production_client --config ../config/postcss.config.cjs",
     "start:storybook": "storybook dev -p 6008",

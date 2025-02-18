@@ -1,7 +1,8 @@
 {
-  "name": "@axa-fr/design-system-look-and-feel-react",
+  "name": "react-lib",
   "version": "0.1.0",
   "description": "",
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -20,6 +21,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.build.json",
+    "pack": "npm pack",
     "postbuild": "copyfiles --up 1 \"src/assets/svg/*.svg\" ./dist/",
     "start:storybook": "storybook dev -p 6009",
     "build:storybook": "storybook build",
@@ -29,7 +31,7 @@
     "prettier": "prettier \"src/**/*.!(js|jsx|ts|tsx|svg)\" --check",
     "prettier:fix": "prettier \"src/**/*.!(js|jsx|ts|tsx|svg)\" --write",
     "tsc": "tsc --noEmit",
-    "test": "vitest",
+    "test": "vitest --config vitest.config.ts",
     "test:ui": "vitest --ui",
     "test:ci": "vitest run --coverage",
     "chromatic": "npx chromatic"
@@ -51,6 +53,7 @@
     }
   },
   "dependencies": {
+    "@axa-fr/design-system-look-and-feel-css": "file:../react-css/axa-fr-design-system-look-and-feel-css-0.1.0.tgz",
     "@fontsource/source-sans-pro": "^5.0.8",
     "@tanem/svg-injector": "^10.1.68",
     "@types/react-dom": "^18.2.24",
@@ -66,5 +69,8 @@
   },
   "volta": {
     "extends": "../package.json"
+  },
+  "devDependencies": {
+    "@types/jest-axe": "^3.5.9"
   }
 }

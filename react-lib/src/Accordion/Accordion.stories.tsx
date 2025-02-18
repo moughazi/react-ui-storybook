@@ -1,4 +1,4 @@
-import callIcon from "@material-symbols/svg-400/outlined/call-fill.svg";
+
 import { Meta, StoryObj } from "@storybook/react";
 import type { ComponentProps } from "react";
 import { Accordion } from ".";
@@ -14,7 +14,6 @@ export default meta;
 
 const defaultArgs = {
     isTitleFirst: true,
-    icon: <Svg src={callIcon} />,
     title: "Titre onglet",
     subtitle: "Titre onglet",
     tagLabel: "En attente",
